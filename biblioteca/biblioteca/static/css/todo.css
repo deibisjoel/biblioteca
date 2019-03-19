@@ -1,0 +1,465 @@
+body{
+background-color: #Ccc;
+}
+@font-face{ 
+	font-family: "Tangerine";
+	src : url("/static/fonts/Tangerine_Bold.ttf") format("truetype");
+	src : url("/static/fonts/Tangerine_Regular.ttf") format("truetype");
+}
+
+header{
+	background-color:black;
+	color:white;
+	width: 100%;
+	height: 120px;
+
+}
+.textot{
+	color: white;
+    font-family: 'Tangerine', serif;
+    text-shadow: 4px 4px 4px #aaa;
+    font-size: 40px;
+}
+.texto{
+	color: black;
+    font-family:  serif;
+    text-shadow: 4px 4px 4px blue;
+    font-size: 18px;
+    }
+.centrar{
+	padding-top: 45px;
+    padding-left: 100px;
+}
+.jeje{
+	margin-top: 10px;
+}
+
+.buscar{
+	text-transform: uppercase;
+	text-align: center;
+	font-family: cursive;
+	color:blue;
+}
+.wow{
+	width: 60%;
+	height: 90px;
+	margin: 60px 0px 0px 20%;
+}
+
+.logo{
+	width: 220px;
+	height: 100px;
+}
+
+
+.resumen{
+	text-align: justify;
+	
+}
+
+.libro{
+	width: 300px;
+	height: 200px;
+}
+.libro:hover{
+	border:5px solid blue;
+}
+
+.on{
+    color:white;
+    text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #5858FA,0 0 0.6em #0040FF, 0 0 0.8em #0040FF, 0 0 1.0em #0040FF, 0 0 1.2em #0040FF;
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -ms-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
+    font-size: 30px;
+    margin: 0px 0px 0px 0%;
+    background-color: black;
+    text-transform: uppercase;
+    font-family: cursive;
+    }
+
+
+    h4{
+    	text-transform: uppercase;
+    	color:#43c;
+    	font-family: cursive;
+
+    }
+    h4:hover{
+    	color:orange;
+    }
+.slibro{
+	text-transform: uppercase;
+    	color:black;
+    	font-family: cursive;
+}
+.header_content{
+	width: 300px;
+	height: 650px;
+
+	position: relative;
+	float: left;
+	margin: 0px 0px 0px 8%;
+	margin-bottom: 40px;
+	background-color: #F0F0F0;
+}
+
+
+.adaptar
+{
+    width: 800px;
+    height: 100%;
+
+}
+
+
+
+}
+.formulario{
+	width: 600px;
+	margin: 0px auto;
+	background-color:#CCc ;
+}
+.contacto{
+	margin:0px auto;
+	border-radius: 6px;
+	padding: 45px 45px 20px;
+	margin-top: 50px;
+
+	
+}
+.contacto label{
+	display: block; 
+	font-weight: bold;
+}
+.contacto div{
+	margin-bottom: 15px;
+}
+.contacto input[type='text']{
+padding: 7px 6px;
+	width: 200px;
+	border: 1px solid #CED5D7;
+	resize: none;
+	
+	margin: 5px 0;
+}
+
+
+.contacto textarea {
+	padding: 7px 6px;
+	width: 294px;
+	border: 1px solid #CED5D7;
+	resize: none;
+	
+	margin: 5px 0;
+}
+
+.contacto input[type='email']{
+	padding: 7px 6px;
+	width: 294px;
+	border: 1px solid #CED5D7;
+	resize: none;
+	
+	margin: 5px 0;
+}
+.contacto input[type='text']:focus, .contacto textarea:focus , .contacto input[type='email']:focus {
+	outline: none;
+	box-shadow:0 0 0 1px black;
+}
+.contacto input[type='submit']{
+	border: 1px solid #CED5D7;
+	
+	padding: 8px 16px;
+	border-radius: 20px;
+	font-weight: bold;
+	text-shadow: 1px 1px 0px white;
+	color:black;
+	background: #e4f1f6; 
+	background: -moz-linear-gradient(top, #e4f1f6 0%, #cfe6ef 100%);
+	background: -webkit-linear-gradient(top, #e4f1f6 0%,#cfe6ef 100%); 
+}
+.contacto input[type='submit']:hover{
+	background: #edfcff; 
+	background: -moz-linear-gradient(top, #edfcff 0%, #cfe6ef 100%);
+	background: -webkit-linear-gradient(top, #edfcff 0%,#cfe6ef 100%); 
+}
+.contacto input[type='submit']:active{
+	background: #cfe6ef; 
+	background: -moz-linear-gradient(top, #cfe6ef 0%, #edfcff 100%);
+	background: -webkit-linear-gradient(top, #cfe6ef 0%,#edfcff 100%);
+}
+
+
+
+.prestamolibro{
+	border: 4px solid #CED5D7;
+	border-radius: 6px;
+	padding: 45px 45px 20px;
+	width: 50%;
+	height: 50%;
+	margin: 40px 0px 0px 200px;
+	background-color: #ccc;
+	box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;
+}
+
+ .prestando{
+ 	margin: 40px 0px 0px 200px;
+ }
+
+input#id_username{
+	background-color:white;
+	border-radius: 5px;
+	width: 300px;
+	display:block;
+
+}
+
+
+.helptext{
+	font-family: arial;
+	font-size: 	14px;
+	color:orange;
+	font-weight: bold;
+
+}
+
+input#id_password1{
+	background-color:white;
+	border-radius: 5px;
+	width: 300px;
+	display: block;
+	padding: 5px;
+
+}
+input#id_password2{
+	background-color:white;
+	padding: 5px;
+	margin: 5px;
+	display: block;
+	border-radius: 5px;
+	width: 300px;
+
+}
+input#id_password2:focus{
+	box-shadow:0 0 0 1px black;;
+
+}
+
+input#id_password{
+	background-color:white;
+	display: block;
+	border-radius: 5px;
+	width: 300px;
+	height: 33px;
+
+}
+input#id_password:focus{
+	box-shadow:0 0 0 1px black;}
+
+input#id_nombre{
+	background-color:white;
+	display: block;
+	border-radius: 5px;
+	width: 300px;
+
+}
+input#id_apellidos{
+	background-color:white;
+	display: block;
+	border-radius: 5px;
+	width: 300px;
+
+}
+input#id_direccion{
+	background-color:white;
+	display: block;
+	border-radius: 5px;
+	width: 300px;
+
+
+}
+
+input#id_telefono{
+	background-color:white;
+	display: block;
+	border-radius: 5px;
+	width: 300px;
+
+}
+
+.subtitulos{
+	font-family: serif;
+	color:blue;
+	font-size: 30px;
+}
+
+#id_idlibro{
+
+border: 1px solid #DBE1EB;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Arial, Verdana;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  background: #FFFFFF;
+  background: linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -moz-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);
+  color: #2E3133;
+}
+
+#id_idlibro:hover{
+	border-color: #FBFFAD;
+}
+#id_idlibro option
+  {
+  border: 1px solid #DBE1EB;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  }
+
+#id_idlibro option:hover
+  {
+ 
+  border: 1px solid #DBE1EB;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  
+  }
+
+#id_idperfil{
+	border: 1px solid #DBE1EB;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Arial, Verdana;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  background: #FFFFFF;
+  background: linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -moz-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);
+  color: #2E3133;
+}
+
+#id_idperfil option
+  {
+  border: 1px solid #DBE1EB;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  }
+
+  #id_idperfil option:hover
+  {
+ 
+  border: 1px solid #DBE1EB;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  
+  }
+.errorlist{
+	text-decoration: none;
+	list-style: none;
+	color:red;
+	
+}
+
+p label{
+	color:#572A0A;
+}
+
+h2{
+    margin: 0;     
+    color: #666;
+    padding-top: 90px;
+    font-size: 52px;
+    font-family: "trebuchet ms", sans-serif;    
+}
+.item{
+    background: #333;    
+    text-align: center;
+    height: 300px !important;
+}
+.carousel{
+    margin-top: 20px;
+}
+.bs-example{
+	margin: 20px;
+}
+/*@media only screen and (max-width:320px){
+	body{background-color: red;}
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+header{background-color: white;}
+header>nav{height: 300px;background-color:blue;border-radius: 0px;}
+
+*/
+ 
+ 
+
+
+header{
+	-webkit-animation-name:animacion;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:2;
+	-webkit-animation-direction:alternate;
+	/*-moz-animation-tining-function:linear;
+	-moz-animation-play-state:paused;
+	-moz-animation-fill-mode:forwards;*/
+}
+@-webkit-keyframes animacion{
+	0%{
+		background-color:#ccc;
+	}
+	100%{
+		background-color: black;
+	}
+}
+@-moz-keyframes animacion{
+	0%{
+		background-color:#ccc;
+	}
+	100%{
+		background-color: black;
+	}
+}
+@-O-keyframes animacion{
+	0%{
+		background-color:#ccc;
+	}
+	100%{
+		background-color: black;
+	}
+}
+/*.animacion:hover{
+	-moz-animation-play-state:running;
+}
+*/
+
+
+

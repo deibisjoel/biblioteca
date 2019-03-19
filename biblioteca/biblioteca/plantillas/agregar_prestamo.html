@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block titulo %} PRESTAMO DE LIBRO  {% endblock titulo %}
+
+
+
+{% block contenido %}
+
+
+<center><h2 class="subtitulos"><strong>PRESTAMO DE LIBRO </strong></h2></center>
+<div class="formulario">
+<center><form class="contacto" role="form" method="POST" accept-charset="utf-8" >{% csrf_token %}
+	{{formulario.as_p}}
+	<button type="submit" class="btn btn-success" value="" >AGREGAR</button>
+	<!--<input type="submit" class="btn btn-primary" value="AGREGAR" id="agregar">-->
+	<a href="{% url 'principal.views.index' %}" class="btn btn-info" id="regresar">REGRESAR</a>
+</form></center>
+
+</div>
+
+{% endblock contenido %}
+
+<!--<select name="id" class="form-control" > 
+	    {% for libro in libros %}
+		<option value="{{ libro.idlibro }}"> {{libro.nombre_libro}} , AUTOR : {{ libro.autor }}</option>
+		{% endfor %}
+		
+</select>-->

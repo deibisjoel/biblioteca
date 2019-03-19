@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block titulo %} LIBROS  {% endblock titulo %}
+
+
+
+{% block contenido %} 
+
+        
+
+{% for libro in libros %}
+    <form  method="POST" accept-charset="utf-8">
+    <div class="header_content">
+    
+      <img class="libro" src='/media/{{ libro.imagen }}' >
+        <marquee class="on" direction="left" scrolldelay="1" scrollamount="7" loop="infinite">{{libro.nombre_libro}}</marquee>
+        <h4><center>SINOPSIS :</center></h4>
+        <strong><p class="slibro"><center>{{libro.sinopsis}} </center></p></strong>
+        <h4><center>EDITORIAL</center></h4>
+        <strong><p class="slibro" ><center>{{libro.editorial}}</center></p></strong>
+        <h4><center> GENERO </center></h4>
+        <strong><p class="slibro" ><center>{{libro.genero}}</center></p></strong>
+        <strong><p class="resumen">ESTE LIBRO ESCRITO POR EL AUTOR {{libro.autor}} DE NACIONALIDAD 
+        {{libro.pais_autor}} PUBLICADO EN {{libro.fecha_publicacion}} ESTA COMPUESTO POR 
+         {{libro.paginas}} PÁGINAS</p></strong>
+        <p>
+          <center><a href="{% url 'principal.views.agregar_prestamo' libro.idlibro %}" class="btn btn-primary" role="button">Prestar</a></center>
+        </p>
+
+    </div>
+
+    </form>
+{% endfor %}
+{% endblock contenido %}
+
+
+
+
+
+

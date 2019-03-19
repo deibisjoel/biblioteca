@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block titulo %} BUSQUEDA {% endblock titulo %}
+
+{% block contenido %} 
+
+ <form class="navbar-form navbar-left" role="search" method="get">
+    <label class="buscar" for="q">BUSCAR LIBROS : </label>
+    <div class="form-group">
+          <input type="text" name="q" class="form-control" value="{{ query|escape }}" placeholder="Nombre del Libro" id="inputSeleccionado">
+     </div>
+    <input type="submit" value="Buscar ... " class="btn btn-primary">
+
+ </form>
+  {% if query %}
+    <!--<h2>  RESULTADOS "{{ query|escape }}":</h2>-->
+
+    {% if results %}
+      
+      {% for libro in results %}
+       <!-- <li>{{libro|escape }}</l1>-->
+  
+    <div class="header_content">
+      <img class="libro" src='/media/{{ libro.imagen }}' >
+        <marquee class="on" direction="left" scrolldelay="1" scrollamount="5" loop="infinite">{{libro.nombre_libro}}</marquee>
+        <h4><center>SINOPSIS :</center></h4>
+        <strong><p><center>{{libro.sinopsis}} </center></p></strong>
+        <h4><center>EDITORIAL</center></h4>
+        <strong><p><center>{{libro.editorial}}</center></p></strong>
+        <h4><center> GENERO </center></h4>
+        <strong><p><center>{{libro.genero}}</center></p></strong>
+        <strong><p class="resumen">ESTE LIBRO ESCRITO POR EL AUTOR {{libro.autor}} DE NACIONALIDAD 
+        {{libro.pais_autor}} PUBLICADO EN {{libro.fecha_publicacion}} ESTA COMPUESTO POR 
+         {{libro.paginas}} PÁGINAS</p></strong>
+         <p>
+          <center><a href="{% url 'principal.views.agregar_prestamo' libro.idlibro %}" class="btn btn-primary" role="button">Prestar</a></center>
+        </p>
+    </div>
+
+      {% endfor %}
+      </ul>
+    {% else %}
+    <div >
+      <marquee class="on" direction="left" scrolldelay="1" scrollamount="12" loop="infinite" style="weigth:40px; heigth:50px;">NO HAY LIBROS CON ESOS DATOS, INTENTE OTRA VEZ</marquee>
+     </div>
+    {% endif %}
+  {% endif %}
+</form>
+{% endblock contenido %} 
+
+
+

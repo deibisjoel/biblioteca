@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>{% block titulo %} {% endblock titulo %}</title>   <!-- BLOCK :TAB-->
+	<!--CSS3-->
+  
+
+	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/bootstrap.min.css" >
+	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/bootstrap.css" >
+	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/todo.css" >
+  <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/bootstrap-theme.css" >
+  <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/bootstrap-theme.min.css" >
+
+
+</head>
+<body >
+	<!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!--Header-->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                        <p class="textot">La lectura nos abre las puertas </p>
+                        <p class="textot">del mundo que te atrevas a imaginar.</p>
+                    </div>
+                    <div class="hidden-xs col-sm-6 col-md-4 col-lg-4 centrar">
+                        <a href="http://www.facebook.com/zDeibisk3" target="_blank"><img src="{{STATIC_URL}}img/facebook.png"></a>
+                        <a href="www.twitter.com/lDEIBYSlxD" target="_blank"><img src="{{STATIC_URL}}img/twitter.png" ></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!--Barra de Navegacion-->
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only texto">Cambiar Navegacion</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <a href="#" class="navbar-brand"></a>
+          </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                 <li> <a class="navbar-brand" href="{% url 'principal.views.index' %}" ><img class="logo" src="{{STATIC_URL}}/img/logo.jpg" alt="" data-toggle="tooltip" data-placement="top" title="LIBRERIA ... BRINDANDOLE EL MEJOR SERVICIO DE PRESTAMO DE LIBROS"></a></li>  
+                <li ><a class="texto" href="{% url 'principal.views.nosotros' %}" data-toggle="tooltip" data-placement="left" title="Click para ir a Inicio">Nosotros</a></li>
+                <li><a class="texto" href="{% url 'principal.views.libros' %}" data-toggle="tooltip" data-placement="left" title="Ver todos los libros"> Libros</a></li>
+            <li><a class="texto" href="{% url 'principal.views.contacto' %} " data-toggle="tooltip" data-placement="left" title="Para ponerse en contacto con Nosotros">Contacto</a></li>
+                </ul>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a  href="{% url 'principal.views.search' %} " class="btn btn-default jeje texto"  data-toggle="tooltip" data-placement="left" title="CLick aqui para buscar">Buscar Libro</a>
+              
+                <ul class="nav navbar-nav navbar-right">
+{% if user.is_authenticated %}
+    
+        <li><a class="texto" href="{% url 'principal.views.reportelibros' %}" title="Usuario Logeado"> Reporte Libros</a> <a class="texto" href="{% url 'principal.views.reporteprestamo' %}" >Reporte Prestamo</a></li>
+       
+        <li><a class="texto" href="#" title="Usuario Logeado"> BIENVENIDO , {{user.username|capfirst}}</a></li>
+        <li ><a class="texto" href="{% url 'principal.views.cerrar_sesion' %}" >Cerrar Sésión</a></li>
+    {% else %}
+        <li><a class="texto" href="{% url 'principal.views.iniciar_sesion' %} " title="CLick para Iniciar Sesión">Iniciar Sesión</a></li>
+        <li ><a class="texto" href="/registro/"title="Click Para Registrarse" >Registrarse</a></li>
+    {% endif %}
+  </ul>
+            </div>
+        </nav>
+
+
+{% block contenido %}
+
+{% endblock contenido %}
+
+
+<script src="{{STATIC_URL}}js/jquery-2.1.1.js"></script>
+<script src="{{STATIC_URL}}js/jquery-2.1.1.min.js"></script>
+<script src="{{STATIC_URL}}js/bootstrap.js"></script>
+<script src="{{STATIC_URL}}js/bootstrap.min.js"></script>
+<script src="{{STATIC_URL}}js/todo.js"></script>
+<script src="{{STATIC_URL}}js/jquery.validate.js"></script>
+</body>
+
+</html>

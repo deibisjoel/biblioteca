@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block titulo %} PRINCIPAL  {% endblock titulo %}
+
+{% block contenido %}
+<section class="wow">
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <strong><CENTER><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          QUIENES SOMOS 
+        </a></CENTER></strong>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <strong><center><p class="parrafo">QUIENES SOMOS...</p></center></strong>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <strong><CENTER><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+         MISIÓN
+        </a></CENTER></strong>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+       <strong><center><p class= "parrafo">NUESTRA MISIÓN ES ...</p></center></strong>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <strong><center><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          VISIÓN
+        </a></center></strong>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        <strong><center><p class="parrafo">NUESTRA VISIÓN ES ...</p></center></strong>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <strong><center><a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+          CONTACTO
+        </a></center></strong>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse">
+      <div class="panel-body">
+        <strong><center><p class="parrafo"> ... </p></center></strong>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+{% endblock contenido %}

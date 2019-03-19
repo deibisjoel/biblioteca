@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block titulo %} NUEVO USUARIO  {% endblock titulo%}
+
+{% block contenido %}
+
+<center><h2 class="subtitulos"><strong> DATOS DEL USUARIO  </strong></h2></center>
+<div class="formulario">
+<center><form class="contacto" method="POST" accept-charset="utf-8" >{% csrf_token %}
+	{{form.as_p}}
+	<input class="btn btn-primary" type="submit" name="" value="REGISTRAR">
+</form></center>
+{% if estado %}
+	<h2> REGISTRO CORRECTO</h2>
+{%endif %}
+</div>
+{% endblock contenido %}
+

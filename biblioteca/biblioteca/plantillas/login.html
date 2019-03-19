@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block titulo %} INICIAR SESION  {% endblock titulo%}
+
+{% block contenido %}
+
+<center><h2 class="subtitulos "><strong>INICIO DE SESIÓN </strong></h2></center>
+<div class="formulario">
+<center><form class="contacto" role="form" method="POST" accept-charset="utf-8" >{% csrf_token %}
+	{{formulario.as_p}}
+	<input class="btn btn" type="submit" name="" value="INGRESAR" style="font-weight: bold;">
+</form></center>
+
+</div>
+{% endblock contenido %}

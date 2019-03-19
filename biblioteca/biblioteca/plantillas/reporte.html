@@ -1,0 +1,95 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<head>
+    <title> HOLA
+    </title>
+    <style>
+        
+        *{
+            margin:0px;
+            padding: 0px;
+ 
+        }
+
+        .titulo{
+            color:blue;
+            font-size: 30px;
+            text-align: center;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+        .imagenl{
+            width: 50px;
+            height: 50px;
+        }
+        h4{
+            color:green;
+            font-family: calibri;
+            padding: 5px;
+        }
+        .header_content{
+            background-color: #ccc;
+            width: 150px;
+            height: 150px;
+        }
+        td>p{
+            text-align: center;
+            font-family: serif;
+            text-transform: uppercase;
+            color:#1F8076;
+        }
+    </style>
+</head>
+<body>
+ 
+
+        <p class="titulo"> REPORTE DE TODOS LOS LIBROS</p>
+        
+
+       
+  
+
+    <table border="2">
+        
+        <thead>
+            <tr>
+                <th style="text-align:center;padding:8px;"><h4>TITULO DE LIBRO:</h4></th>
+                <th style="text-align:center;padding:8px;"><h4>SINOPSIS</h4></th>
+                <th style="text-align:center;padding:8px;"><h4>EDITORIAL</h4></th>
+                <th style="text-align:center;padding:8px;"><h4>GENERO </h4></th>
+                <th style="text-align:center;padding:8px;"><h4> OTROS DATOS</h4></th>
+                <th style="text-align:center;padding:8px;"><h4> ESTADO</h4></th>
+            </tr>
+        </thead>
+        {% for libro in libros %} 
+        <tbody>
+            <tr>
+                <td><p>{{libro.nombre_libro}} </p></td>
+                <td><p>{{libro.sinopsis}} </p></td>
+                <td><p >{{libro.editorial}}</p></td>
+                <td><p >{{libro.genero}}</p></td>
+                <td><p >ESTE LIBRO ESCRITO POR EL AUTOR {{libro.autor}} DE NACIONALIDAD 
+        {{libro.pais_autor}} PUBLICADO EN {{libro.fecha_publicacion}} ESTA COMPUESTO POR 
+         {{libro.paginas}} PAGINAS</p></td>
+         
+        {% if libro.estado %}
+         <td><p >DISPONIBLE</p>
+         {% else %}
+        <td><p >PRESTADO</p>
+       {% endif %}
+            </tr>
+       
+        </tbody>
+        {% endfor %}
+    </table>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

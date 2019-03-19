@@ -1,0 +1,111 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<head>
+    <title> REPORTE PRESTAMO
+    </title>
+    <style>
+        
+        *{
+            margin:0px;
+            padding: 0px;
+ 
+        }
+
+        .titulo{
+            color:blue;
+            font-size: 30px;
+            text-align: center;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+        .imagenl{
+            width: 50px;
+            height: 50px;
+        }
+        h4{
+            color:green;
+            font-family: calibri;
+            padding: 5px;
+        }
+        .header_content{
+            background-color: #ccc;
+            width: 150px;
+            height: 150px;
+        }
+        td>p{
+            text-align: center;
+            font-family: serif;
+            text-transform: uppercase;
+            color:#1F8076;
+        }
+    </style>
+</head>
+<body>
+ 
+
+        <p class="titulo"> REPORTE DE TODOS LOS PRESTAMOS </p>
+        
+
+       
+  
+
+    <table border="2">
+        
+        <thead>
+            <tr>
+                <th style="text-align:center;padding:8px;"><h4>ID DE PRESTAMO</h4></th>
+                <th style="text-align:center;padding:8px;"><h4> LIBRO PRESTADO</h4></th>
+                <th style="text-align:center;padding:8px;"><h4>USUARIO</h4></th>
+                <th style="text-align:center;padding:8px;"><h4>TIEMPO REGISTRO</h4></th>
+                <th style="text-align:center;padding:8px;"><h4> FECHA DE DEVOLUCION</h4></th>
+            </tr>
+        </thead>
+        {% for vencido in prestamo %} 
+        <tbody>
+            <tr>
+                <td><p>{{vencido.idprestamo}} </p></td>
+                <td><p>{{vencido.idlibro}} </p></td>
+                <td><p >{{vencido.idperfil}}</p></td>
+                <td><p >{{vencido.tiempo_registro}}</p></td>
+                <td><p >{{vencido.fecha_devolucion}}</p></td>
+            </tr>
+       
+        </tbody>
+        {% endfor %}
+    </table>
+
+    
+
+
+        <p class="titulo"> PRESTAMOS VENCIDOS HOY</p>
+        
+
+       
+  
+
+    <table border="2">
+        
+        <thead>
+            <tr>
+                <th style="text-align:center;padding:8px;"><h4>ID DE PRESTAMO</h4></th>
+                <th style="text-align:center;padding:8px;"><h4> LIBRO PRESTADO</h4></th>
+                <th style="text-align:center;padding:8px;"><h4>USUARIO</h4></th>
+                <th style="text-align:center;padding:8px;"><h4>TIEMPO REGISTRO</h4></th>
+                <th style="text-align:center;padding:8px;"><h4> FECHA DE DEVOLUCION</h4></th>
+            </tr>
+        </thead>
+        {% for vencido in vencidos %} 
+        <tbody>
+            <tr>
+                <td><p>{{vencido.idprestamo}} </p></td>
+                <td><p>{{vencido.idlibro}} </p></td>
+                <td><p >{{vencido.idperfil}}</p></td>
+                <td><p >{{vencido.tiempo_registro}}</p></td>
+                <td><p >{{vencido.fecha_devolucion}}</p></td>
+            </tr>
+       
+        </tbody>
+        {% endfor %}
+    </table>
+</body>
+</html>
